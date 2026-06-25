@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+long long potencia(int base, int expoente) {
+    long long resultado = 1;
+
+    for (int i = 0; i < expoente; i++) {
+        resultado *= base;
+    }
+
+    return resultado;
+}
+
+int main() {
+    int base, expoente;
+
+    cout << "Base: ";
+    cin >> base;
+
+    cout << "Expoente: ";
+    cin >> expoente;
+
+    cout << "Resultado: " << potencia(base, expoente) << endl;
+
+    return 0;
+}

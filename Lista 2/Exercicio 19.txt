@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int v[10], p[10], i[10], s[10];
+    int a=0,b=0;
+
+    for(int j=0;j<10;j++) {
+        cin >> v[j];
+
+        if(v[j]%2==0) p[a++]=v[j];
+        else i[b++]=v[j];
+    }
+
+    sort(p,p+a);
+    sort(i,i+b);
+
+    for(int j=0;j<10;j++) {
+        s[j] = (j<a?p[j]:0) + (j<b?i[j]:0);
+        cout << s[j] << " ";
+    }
+}
