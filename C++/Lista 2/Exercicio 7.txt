@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+bool crescente(int v[]) {
+    for(int i = 0; i < 4; i++)
+        if(v[i] > v[i+1]) return false;
+    return true;
+}
+
+bool decrescente(int v[]) {
+    for(int i = 0; i < 4; i++)
+        if(v[i] < v[i+1]) return false;
+    return true;
+}
+
+int main() {
+    int v[5];
+
+    for(int i = 0; i < 5; i++) cin >> v[i];
+
+    if(crescente(v)) cout << "Crescente";
+    else if(decrescente(v)) cout << "Decrescente";
+    else cout << "Nao ordenado";
+}

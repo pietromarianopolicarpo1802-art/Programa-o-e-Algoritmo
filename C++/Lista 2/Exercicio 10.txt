@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+bool vogal(char c) {
+    c = tolower(c);
+    return c=='a'||c=='e'||c=='i'||c=='o'||c=='u';
+}
+
+int main() {
+    string s;
+    cin >> s;
+
+    int v = 0, c = 0;
+
+    for(char x : s) {
+        if(vogal(x)) v++;
+        else c++;
+    }
+
+    cout << v << " " << c;
+}
